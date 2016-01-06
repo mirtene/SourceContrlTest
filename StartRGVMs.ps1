@@ -8,7 +8,7 @@ workflow StartRGVMs
 	
 		#Authenticate Runbook to Subscription
 		Write-Output "Authenticating Runbook to Subscription.."
-		$CredentialAssetName = 'CredentialAssetName'
+		$CredentialAssetName = 'CredentialAsset'
 		$Cred = GetAutomationPSCredential -Name $CredentialAssetName
 		if(!$Cred) {
 			Throw "Could not find an Automation Credential Asset named '$CredentialAssetName'. Make sure you have created one in this Automation Account."
